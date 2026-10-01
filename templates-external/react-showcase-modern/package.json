@@ -1,0 +1,10 @@
+{
+  "name": "react-showcase-modern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Phase-1 fixture: JSON-data-driven React portfolio template",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

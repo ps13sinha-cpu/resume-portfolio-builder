@@ -1,0 +1,778 @@
+{
+  "users": [
+    {
+      "id": "user-demo",
+      "email": "piyush@example.com",
+      "password": "password123",
+      "name": "Piyush Sharma"
+    }
+  ],
+  "portfolios": {
+    "user-demo": {
+      "id": "sample-fullstack",
+      "user_id": "demo-user",
+      "slug": "piyush-dev",
+      "is_public": true,
+      "layout_id": "developer",
+      "profile": {
+        "fullName": "Piyush Kumar Sinha",
+        "title": "B.Tech Computer Science Engineering, Cloud Computing Specialization | SRMIST KTR, Chennai |",
+        "bio": "B.Tech Computer Science Engineering, Cloud Computing Specialization | SRMIST KTR, Chennai | with experience at Al & Data Science Intern. Skilled in Software, React, Express, security, AWS, machine learning. Recent work includes Smart Campus Utility Platform | Java, Spring Boot, Data Reconciliation Dashboard | React, TypeScript,.",
+        "location": "Piyush Kumar Sinha\nB.Tech Computer Science Engineering, Cloud",
+        "email": "ps13sinha@gmail.com",
+        "github": "",
+        "linkedin": "",
+        "twitter": "https://x.com",
+        "website": "",
+        "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+        "statusPill": "🚀 Open for High-Impact Roles",
+        "phone": "9608850540"
+      },
+      "experience": [
+        {
+          "id": "exp-1790749895223-0",
+          "company": "Al & Data Science Intern",
+          "role": "XYlofy Al 15  - 15",
+          "start": "Jun 2026",
+          "end": "15 Jul 2026",
+          "isCurrent": false,
+          "location": "",
+          "bullets": [],
+          "order_index": 0
+        },
+        {
+          "id": "exp-1790749895223-1",
+          "company": "",
+          "role": "4-Week Internship",
+          "start": "",
+          "end": "",
+          "isCurrent": false,
+          "location": "",
+          "bullets": [],
+          "order_index": 1
+        },
+        {
+          "id": "exp-1790749895223-2",
+          "company": "",
+          "role": "« Gained practical exposure to Artificial Intelligence and Machine Learning concepts in an applied",
+          "start": "",
+          "end": "",
+          "isCurrent": false,
+          "location": "",
+          "bullets": [
+            "internship setting"
+          ],
+          "order_index": 2
+        },
+        {
+          "id": "exp-1790749895223-3",
+          "company": "",
+          "role": "« Developed experience in Data Analysis, Data Visualization, and data-driven decision-making",
+          "start": "",
+          "end": "",
+          "isCurrent": false,
+          "location": "",
+          "bullets": [],
+          "order_index": 3
+        },
+        {
+          "id": "exp-1790749895223-4",
+          "company": "",
+          "role": "+ Demonstrated analytical thinking, dedication, and a strong commitment to learning throughout the",
+          "start": "",
+          "end": "",
+          "isCurrent": false,
+          "location": "",
+          "bullets": [
+            "internship."
+          ],
+          "order_index": 4
+        }
+      ],
+      "education": [
+        {
+          "id": "edu-1790749895223-0",
+          "institution": "SRM Institute of Science and Technology (KTR), Chennai 2024",
+          "degree": "",
+          "field": "",
+          "start": "2024 - 2028",
+          "end": "2024",
+          "grade": "",
+          "description": "",
+          "order_index": 0
+        },
+        {
+          "id": "edu-1790749895223-1",
+          "institution": "B.Tech in Computer Science Engineering, Cloud Computing Specialization | Current CGPA: 9.33 / 10",
+          "degree": "B.Tech in Computer Science Engineering",
+          "field": "",
+          "start": "",
+          "end": "",
+          "grade": "",
+          "description": "",
+          "order_index": 1
+        },
+        {
+          "id": "edu-1790749895223-2",
+          "institution": "Mohini Devi Memorial School, Araria 2024 Class XI, CBSE | 84.2%",
+          "degree": "",
+          "field": "",
+          "start": "2024",
+          "end": "",
+          "grade": "",
+          "description": "",
+          "order_index": 2
+        },
+        {
+          "id": "edu-1790749895223-3",
+          "institution": "IHHS Academy, Bathnaha, Bihar 2022 Class X, CBSE | 81.2%",
+          "degree": "",
+          "field": "",
+          "start": "2022",
+          "end": "",
+          "grade": "",
+          "description": "",
+          "order_index": 3
+        }
+      ],
+      "skills": [
+        {
+          "id": "sk-1790749895223-0",
+          "name": "Programming: Java",
+          "category": "Languages",
+          "level": 80,
+          "order_index": 0
+        },
+        {
+          "id": "sk-1790749895223-1",
+          "name": "Python",
+          "category": "Languages",
+          "level": 80,
+          "order_index": 1
+        },
+        {
+          "id": "sk-1790749895223-2",
+          "name": "C++",
+          "category": "Languages",
+          "level": 80,
+          "order_index": 2
+        },
+        {
+          "id": "sk-1790749895223-3",
+          "name": "JavaScript",
+          "category": "Languages",
+          "level": 80,
+          "order_index": 3
+        },
+        {
+          "id": "sk-1790749895223-4",
+          "name": "TypeScript",
+          "category": "Languages",
+          "level": 80,
+          "order_index": 4
+        },
+        {
+          "id": "sk-1790749895223-5",
+          "name": "SQL",
+          "category": "Database",
+          "level": 80,
+          "order_index": 5
+        },
+        {
+          "id": "sk-1790749895223-6",
+          "name": "Backend & APIs: Spring Boot",
+          "category": "Backend",
+          "level": 80,
+          "order_index": 6
+        },
+        {
+          "id": "sk-1790749895223-7",
+          "name": "Node js",
+          "category": "Backend",
+          "level": 80,
+          "order_index": 7
+        },
+        {
+          "id": "sk-1790749895223-8",
+          "name": "Express basics",
+          "category": "Backend",
+          "level": 80,
+          "order_index": 8
+        },
+        {
+          "id": "sk-1790749895223-9",
+          "name": "REST APIs",
+          "category": "Backend",
+          "level": 80,
+          "order_index": 9
+        },
+        {
+          "id": "sk-1790749895223-10",
+          "name": "MVC",
+          "category": "Core",
+          "level": 80,
+          "order_index": 10
+        },
+        {
+          "id": "sk-1790749895223-11",
+          "name": "JWT",
+          "category": "Core",
+          "level": 80,
+          "order_index": 11
+        },
+        {
+          "id": "sk-1790749895223-12",
+          "name": "auth basics",
+          "category": "Core",
+          "level": 80,
+          "order_index": 12
+        },
+        {
+          "id": "sk-1790749895223-13",
+          "name": "validation",
+          "category": "Core",
+          "level": 80,
+          "order_index": 13
+        },
+        {
+          "id": "sk-1790749895223-14",
+          "name": "error handling",
+          "category": "Core",
+          "level": 80,
+          "order_index": 14
+        },
+        {
+          "id": "sk-1790749895223-15",
+          "name": "Frontend: React js",
+          "category": "Frontend",
+          "level": 80,
+          "order_index": 15
+        },
+        {
+          "id": "sk-1790749895223-16",
+          "name": "HTML5",
+          "category": "Frontend",
+          "level": 80,
+          "order_index": 16
+        },
+        {
+          "id": "sk-1790749895223-17",
+          "name": "CSS3",
+          "category": "Frontend",
+          "level": 80,
+          "order_index": 17
+        },
+        {
+          "id": "sk-1790749895223-18",
+          "name": "Tailwind CSS",
+          "category": "Frontend",
+          "level": 80,
+          "order_index": 18
+        },
+        {
+          "id": "sk-1790749895223-19",
+          "name": "responsive Ul design",
+          "category": "Core",
+          "level": 80,
+          "order_index": 19
+        },
+        {
+          "id": "sk-1790749895223-20",
+          "name": "Databases & Caching: MySQL",
+          "category": "Database",
+          "level": 80,
+          "order_index": 20
+        },
+        {
+          "id": "sk-1790749895223-21",
+          "name": "PostgreSQL basics",
+          "category": "Database",
+          "level": 80,
+          "order_index": 21
+        },
+        {
+          "id": "sk-1790749895223-22",
+          "name": "MongoDB",
+          "category": "Database",
+          "level": 80,
+          "order_index": 22
+        },
+        {
+          "id": "sk-1790749895223-23",
+          "name": "schema design",
+          "category": "Core",
+          "level": 80,
+          "order_index": 23
+        },
+        {
+          "id": "sk-1790749895223-24",
+          "name": "indexing basics",
+          "category": "Core",
+          "level": 80,
+          "order_index": 24
+        },
+        {
+          "id": "sk-1790749895223-25",
+          "name": "Cloud & DevOps: AWS",
+          "category": "DevOps",
+          "level": 80,
+          "order_index": 25
+        },
+        {
+          "id": "sk-1790749895223-26",
+          "name": "Docker",
+          "category": "DevOps",
+          "level": 80,
+          "order_index": 26
+        },
+        {
+          "id": "sk-1790749895223-27",
+          "name": "Linux",
+          "category": "DevOps",
+          "level": 80,
+          "order_index": 27
+        },
+        {
+          "id": "sk-1790749895223-28",
+          "name": "Git",
+          "category": "Tools",
+          "level": 80,
+          "order_index": 28
+        },
+        {
+          "id": "sk-1790749895223-29",
+          "name": "GitHub",
+          "category": "Tools",
+          "level": 80,
+          "order_index": 29
+        },
+        {
+          "id": "sk-1790749895223-30",
+          "name": "Postman",
+          "category": "Tools",
+          "level": 80,
+          "order_index": 30
+        },
+        {
+          "id": "sk-1790749895224-31",
+          "name": "CI",
+          "category": "Core",
+          "level": 80,
+          "order_index": 31
+        },
+        {
+          "id": "sk-1790749895224-32",
+          "name": "CD basics",
+          "category": "Core",
+          "level": 80,
+          "order_index": 32
+        },
+        {
+          "id": "sk-1790749895224-33",
+          "name": "Al",
+          "category": "Core",
+          "level": 80,
+          "order_index": 33
+        },
+        {
+          "id": "sk-1790749895224-34",
+          "name": "ML & Security: TensorFlow",
+          "category": "ML",
+          "level": 80,
+          "order_index": 34
+        },
+        {
+          "id": "sk-1790749895224-35",
+          "name": "Keras",
+          "category": "Core",
+          "level": 80,
+          "order_index": 35
+        },
+        {
+          "id": "sk-1790749895224-36",
+          "name": "OpenCV",
+          "category": "Core",
+          "level": 80,
+          "order_index": 36
+        },
+        {
+          "id": "sk-1790749895224-37",
+          "name": "NLP",
+          "category": "ML",
+          "level": 80,
+          "order_index": 37
+        },
+        {
+          "id": "sk-1790749895224-38",
+          "name": "anomaly detection",
+          "category": "Core",
+          "level": 80,
+          "order_index": 38
+        },
+        {
+          "id": "sk-1790749895224-39",
+          "name": "SQL injection and XSS detection",
+          "category": "Database",
+          "level": 80,
+          "order_index": 39
+        },
+        {
+          "id": "sk-1790749895224-40",
+          "name": "Software",
+          "category": "Core",
+          "level": 80,
+          "order_index": 40
+        },
+        {
+          "id": "sk-1790749895224-41",
+          "name": "machine learning",
+          "category": "Core",
+          "level": 80,
+          "order_index": 41
+        },
+        {
+          "id": "sk-1790749895224-42",
+          "name": "Engineer",
+          "category": "Core",
+          "level": 80,
+          "order_index": 42
+        },
+        {
+          "id": "sk-1790749895224-43",
+          "name": "Next.js",
+          "category": "Core",
+          "level": 80,
+          "order_index": 43
+        },
+        {
+          "id": "sk-1790749895224-44",
+          "name": "Node.js",
+          "category": "Core",
+          "level": 80,
+          "order_index": 44
+        },
+        {
+          "id": "sk-1790749895224-45",
+          "name": "CI/CD",
+          "category": "Core",
+          "level": 80,
+          "order_index": 45
+        },
+        {
+          "id": "sk-1790749895224-46",
+          "name": "TechNova",
+          "category": "Core",
+          "level": 80,
+          "order_index": 46
+        },
+        {
+          "id": "sk-1790749895224-47",
+          "name": "SaaS",
+          "category": "Core",
+          "level": 80,
+          "order_index": 47
+        },
+        {
+          "id": "sk-1790749895224-48",
+          "name": "AI",
+          "category": "Core",
+          "level": 80,
+          "order_index": 48
+        },
+        {
+          "id": "sk-1790749895224-49",
+          "name": "OpenAI",
+          "category": "Core",
+          "level": 80,
+          "order_index": 49
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj-1790749895224-0",
+          "title": "Smart Campus Utility Platform | Java, Spring Boot, Data Reconciliation Dashboard | React, TypeScript,",
+          "description": "MySQL, React saL « Built a full-stack platform concept for student » Created a dashboard to compare records across services, issue tracking, announcements, and sources, highlight mismatches, filter status states,",
+          "techTags": [],
+          "liveUrl": "",
+          "githubUrl": "",
+          "imageUrl": "",
+          "featured": true,
+          "order_index": 0
+        },
+        {
+          "id": "proj-1790749895224-1",
+          "title": "searchable records with REST APIs and role- and generate structured summaries.",
+          "description": "",
+          "techTags": [],
+          "liveUrl": "",
+          "githubUrl": "",
+          "imageUrl": "",
+          "featured": true,
+          "order_index": 1
+        },
+        {
+          "id": "proj-1790749895224-2",
+          "title": "bie Workflows Al SkillMatch & Resume Intelligence Platform |",
+          "description": "",
+          "techTags": [],
+          "liveUrl": "",
+          "githubUrl": "",
+          "imageUrl": "",
+          "featured": false,
+          "order_index": 2
+        },
+        {
+          "id": "proj-1790749895224-3",
+          "title": "Al-Based Operating System Assistant | Python, Python, NLP, React",
+          "description": "NLP, Automation « Developed a profile-analysis concept that extracts « Designed an Al desktop assistant concept that skills, identifies gaps, and suggests resume understands natural-language commands, improvements and learning paths. launches apps, searches files, manages notes, and",
+          "techTags": [],
+          "liveUrl": "",
+          "githubUrl": "",
+          "imageUrl": "",
+          "featured": false,
+          "order_index": 3
+        },
+        {
+          "id": "proj-1790749895224-4",
+          "title": "Web Vulnerability Detection System | Python,",
+          "description": "automates routine OS tasks. Security Testing",
+          "techTags": [],
+          "liveUrl": "",
+          "githubUrl": "",
+          "imageUrl": "",
+          "featured": false,
+          "order_index": 4
+        },
+        {
+          "id": "proj-1790749895224-5",
+          "title": "Email Phishing Detector Using NLP | Python, NLP, « Created an automated scanner concept for seed",
+          "description": "Machine Learning URLS to detect SQL injection and cross-site « Created a phishing-detection pipeline using text scripting pattems with severity and remediation preprocessing, keyword and URL signals, feature notes. extraction, and classification logic. Al-Enhanced Security Framework for 5G Ni oe TensorFlow, Keras, Anomaly Detection",
+          "techTags": [],
+          "liveUrl": "",
+          "githubUrl": "",
+          "imageUrl": "",
+          "featured": false,
+          "order_index": 5
+        },
+        {
+          "id": "proj-1790749895224-6",
+          "title": "Payment Gateway Workflow Simulator | Java, « Built an ML-based anomaly detection concept for",
+          "description": "Spring Boot, MySQL. JWT suspicious network behavior, reliability issues, and « Built a checkoutto-status simulation with orders, model-driven alert signals. payment initiation, transaction tracking. refunds, validation, and modular REST service logic.",
+          "techTags": [],
+          "liveUrl": "",
+          "githubUrl": "",
+          "imageUrl": "",
+          "featured": false,
+          "order_index": 6
+        },
+        {
+          "id": "proj-1790749895224-7",
+          "title": "Fraud & Risk Scoring Engine | Python, SQL.",
+          "description": "Streamlit « Designed explainable risk rules for velocity checks, unusual amount detection, repeated failures, and behavior-based anomalies.",
+          "techTags": [],
+          "liveUrl": "",
+          "githubUrl": "",
+          "imageUrl": "",
+          "featured": false,
+          "order_index": 7
+        }
+      ],
+      "certifications": [
+        {
+          "id": "cert-1790749895224-0",
+          "name": "+ AWS Solutions Architecture Job Simulation",
+          "issuer": "Forage | Dec 2025",
+          "date": "Dec 2025",
+          "credentialUrl": "",
+          "order_index": 0
+        },
+        {
+          "id": "cert-1790749895224-1",
+          "name": "« Deloitte Australia Cyber Job Simulation",
+          "issuer": "Forage | Dec 2025",
+          "date": "Dec 2025",
+          "credentialUrl": "",
+          "order_index": 1
+        },
+        {
+          "id": "cert-1790749895224-2",
+          "name": "+ Tata GenAl-Powered Data Analytics Job Simulation",
+          "issuer": "Forage | Dec 2025",
+          "date": "Dec 2025",
+          "credentialUrl": "",
+          "order_index": 2
+        },
+        {
+          "id": "cert-1790749895224-3",
+          "name": "« Oliver Wyman Climate Change Financial Services Job Simulation",
+          "issuer": "Forage | Dec 2025",
+          "date": "Dec 2025",
+          "credentialUrl": "",
+          "order_index": 3
+        },
+        {
+          "id": "cert-1790749895224-4",
+          "name": "ACHIEVEMENTS & INTERESTS",
+          "issuer": "",
+          "date": "",
+          "credentialUrl": "",
+          "order_index": 4
+        },
+        {
+          "id": "cert-1790749895224-5",
+          "name": "= Won 1st prize in Webathon and 2nd prize in Datathon at NEXTGEN Al event",
+          "issuer": "SRMIST Kattankulathur.",
+          "date": "",
+          "credentialUrl": "",
+          "order_index": 5
+        },
+        {
+          "id": "cert-1790749895224-6",
+          "name": "« Built full-stack",
+          "issuer": "AUML",
+          "date": "",
+          "credentialUrl": "",
+          "order_index": 6
+        },
+        {
+          "id": "cert-1790749895224-7",
+          "name": "« Active interest areas: applied Al",
+          "issuer": "cybersecurity",
+          "date": "",
+          "credentialUrl": "",
+          "order_index": 7
+        },
+        {
+          "id": "cert-1790749895224-8",
+          "name": "tools.",
+          "issuer": "",
+          "date": "",
+          "credentialUrl": "",
+          "order_index": 8
+        }
+      ],
+      "updated_at": "2026-09-30T06:32:24.404Z",
+      "resume_template": "sidebar",
+      "resume_accent": null,
+      "target_job": {
+        "description": "Full-Stack Software Engineer (AI/ML Products)\nTechNova Solutions — Bangalore, India (Hybrid) — Full-time\n\nAbout the role\nWe're looking for a Full-Stack Software Engineer to join our product engineering team building AI-powered SaaS tools. You'll work across the stack — from React/Next.js frontends to Node.js/Express APIs — and collaborate closely with our ML team to ship features that put machine learning models in front of real users.\n\nResponsibilities\n\nDesign and build responsive, production-grade web applications using React, Next.js, and TypeScript\nDevelop and maintain RESTful APIs using Node.js and Express, with PostgreSQL as the primary data store\nIntegrate third-party AI APIs (OpenAI, Anthropic, or similar) into product features\nOwn features end-to-end: from database schema design through deployment and monitoring\nWrite clean, tested code and participate in code reviews\nCollaborate with designers and product managers to translate requirements into technical specs\nOptimize application performance and ensure responsive design across devices\nImplement authentication, authorization, and data validation following security best practices\nDeploy and maintain CI/CD pipelines using GitHub Actions and Vercel/AWS\n\nRequirements\n\n1–3 years of professional experience in full-stack web development\nStrong proficiency in JavaScript/TypeScript, React, and modern frontend tooling (Vite, Tailwind CSS)\nExperience with Node.js, Express, and RESTful API design\nWorking knowledge of SQL databases (PostgreSQL preferred) and schema design\nFamiliarity with cloud storage (S3 or equivalent) and deployment platforms (Vercel, AWS, or GCP)\nUnderstanding of authentication patterns (JWT, OAuth) and basic security practices (input validation, XSS/CSRF prevention)\nExperience with Git, CI/CD pipelines, and agile development workflows\nBachelor's degree in Computer Science or related field (or equivalent practical experience)\n\nNice to have\n\nExperience integrating LLM APIs into production applications\nExposure to data validation libraries (Zod, Yup)\nFamiliarity with animation libraries (GSAP, Framer Motion) for polished UI\nExperience with automated testing (Jest, Playwright)\nPrior work on a project involving document parsing or data extraction (PDF/DOCX)",
+        "requirements": [
+          {
+            "requirement": "Software",
+            "status": "met"
+          },
+          {
+            "requirement": "Engineer",
+            "status": "met"
+          },
+          {
+            "requirement": "React",
+            "status": "met"
+          },
+          {
+            "requirement": "Next.js",
+            "status": "met"
+          },
+          {
+            "requirement": "Node.js",
+            "status": "met"
+          },
+          {
+            "requirement": "Express",
+            "status": "met"
+          },
+          {
+            "requirement": "security",
+            "status": "met"
+          },
+          {
+            "requirement": "AWS",
+            "status": "met"
+          },
+          {
+            "requirement": "CI/CD",
+            "status": "met"
+          },
+          {
+            "requirement": "TechNova",
+            "status": "met"
+          },
+          {
+            "requirement": "SaaS",
+            "status": "met"
+          },
+          {
+            "requirement": "machine learning",
+            "status": "met"
+          },
+          {
+            "requirement": "ML",
+            "status": "met"
+          },
+          {
+            "requirement": "AI",
+            "status": "met"
+          },
+          {
+            "requirement": "OpenAI",
+            "status": "met"
+          },
+          {
+            "requirement": "Anthropic",
+            "status": "missing"
+          },
+          {
+            "requirement": "GitHub",
+            "status": "met"
+          },
+          {
+            "requirement": "CSS",
+            "status": "met"
+          },
+          {
+            "requirement": "Tailwind",
+            "status": "met"
+          },
+          {
+            "requirement": "JavaScript/TypeScript",
+            "status": "missing"
+          },
+          {
+            "requirement": "Vite",
+            "status": "missing"
+          },
+          {
+            "requirement": "API",
+            "status": "missing"
+          },
+          {
+            "requirement": "GCP",
+            "status": "missing"
+          },
+          {
+            "requirement": "S3",
+            "status": "missing"
+          },
+          {
+            "requirement": "Vercel",
+            "status": "missing"
+          },
+          {
+            "requirement": "JWT",
+            "status": "met"
+          },
+          {
+            "requirement": "Agile",
+            "status": "missing"
+          },
+          {
+            "requirement": "Git",
+            "status": "met"
+          }
+        ],
+        "analyzed_at": "2026-09-30T06:31:35.227Z"
+      },
+      "entry_path": "optimize"
+    }
+  }
+}

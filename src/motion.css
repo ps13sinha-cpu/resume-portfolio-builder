@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Motion system — one shared set of animations for the whole app.
+   Cinematic and restrained: expo ease-out, spotlight-blue light effects.
+   Everything below is switched off for prefers-reduced-motion.
+   ========================================================================== */
+:root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --spot-rgb: 127, 168, 232;
+}
+
+/* --- Screen-to-screen transition (keyed on the onboarding step) --------- */
+@keyframes stepIn {
+  from { opacity: 0; transform: translateY(14px) scale(0.985); filter: blur(8px); }
+  to   { opacity: 1; transform: none; filter: none; }
+}
+.step-enter { animation: stepIn 0.65s var(--ease-out-expo) both; }
+
+/* --- Rise in, staggered via --i ------------------------------------------ */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+.rise-in { animation: riseIn 0.5s var(--ease-out-expo) both; animation-delay: calc(var(--i, 0) * 70ms); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.frame-fade { animation: fadeIn 0.45s ease both; }
+
+/* --- Resume page swap when changing design ------------------------------- */
+@keyframes paperSwap {
+  from { opacity: 0; transform: perspective(1400px) rotateX(6deg) translateY(14px); filter: blur(4px); }
+  to   { opacity: 1; transform: none; filter: none; }
+}
+.paper-swap { animation: paperSwap 0.55s var(--ease-out-expo) both; transform-origin: 50% 0; }
+
+/* --- Button light sweep --------------------------------------------------- */
+/* :where() = zero specificity, so layout classes like .fixed still win */
+:where(.btn-shine) { position: relative; }
+.btn-shine { overflow: hidden; isolation: isolate; transition: transform 0.15s ease; }
+.btn-shine::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(110deg, transparent 30%, rgba(var(--spot-rgb), 0.55) 50%, transparent 70%);
+  transform: translateX(-130%);
+  transition: transform 0.9s var(--ease-out-expo);
+  pointer-events: none;
+  z-index: 1;
+}
+.btn-shine:hover::after, .group:hover .btn-shine::after { transform: translateX(130%); }
+.btn-shine:active { transform: scale(0.97); }
+
+/* --- Cursor-following card spotlight (set --mx/--my via trackSpot) ------- */
+.spot-card { position: relative; isolation: isolate; }
+.spot-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--spot-rgb), 0.16), transparent 45%);
+  z-index: -1; /* above the card's own background, below its content */
+}
+.spot-card:hover::before { opacity: 1; }
+
+/* --- Travelling light around a card's border ------------------------------ */
+@property --beam-angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+.border-beam::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(from var(--beam-angle), transparent 65%, rgba(var(--spot-rgb), 0.95) 82%, transparent 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  animation: beamSpin 3.2s linear infinite;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.border-beam:hover::after, .border-beam:focus-visible::after { opacity: 1; }
+@keyframes beamSpin { to { --beam-angle: 360deg; } }
+
+/* --- Pulsing ring (AI assistant launcher, active wizard dot) -------------- */
+@keyframes ringPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(var(--spot-rgb), 0.55); }
+  70%  { box-shadow: 0 0 0 14px rgba(var(--spot-rgb), 0); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--spot-rgb), 0); }
+}
+.ring-pulse { animation: ringPulse 2.4s ease-out infinite; }
+@keyframes dotPulse {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.65; }
+  50%      { transform: translateX(-50%) scale(1.6); opacity: 1; }
+}
+.dot-pulse { animation: dotPulse 1.8s ease-in-out infinite; }
+
+/* --- Wizard connector fill ------------------------------------------------ */
+@keyframes lineFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.line-fill { transform-origin: left center; animation: lineFill 0.8s var(--ease-out-expo) both; animation-delay: calc(var(--i, 0) * 90ms); }
+
+/* --- Popover (assistant panel) and chat messages -------------------------- */
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(18px) scale(0.95); }
+  to   { opacity: 1; transform: none; }
+}
+.pop-in { animation: popIn 0.42s var(--ease-out-expo) both; transform-origin: 100% 100%; }
+@keyframes msgIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.msg-in { animation: msgIn 0.38s var(--ease-out-expo) both; animation-delay: calc(var(--i, 0) * 80ms); }
+
+.typing-dots { display: inline-flex; gap: 4px; align-items: center; }
+.typing-dots span {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgb(var(--spot-rgb));
+  animation: typingDot 1.2s ease-in-out infinite;
+}
+.typing-dots span:nth-child(2) { animation-delay: 0.15s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes typingDot {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.35; }
+  40%           { transform: translateY(-4px); opacity: 1; }
+}
+
+/* --- Loading skeleton shimmer --------------------------------------------- */
+.skeleton {
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.035) 25%, rgba(255,255,255,0.10) 37%, rgba(255,255,255,0.035) 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+@keyframes shimmer { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+
+/* --- Headline light sheen (login) ----------------------------------------- */
+.headline-sheen {
+  background: linear-gradient(100deg, #ffffff 38%, #cfe0ff 48%, #ffffff 58%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: sheen 7s ease-in-out infinite;
+}
+@keyframes sheen { 0%, 20% { background-position: 120% 0; } 80%, 100% { background-position: -120% 0; } }
+
+/* --- Icon float on hover --------------------------------------------------- */
+@keyframes iconBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+.group:hover .icon-bob { animation: iconBob 1.4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .step-enter, .rise-in, .frame-fade, .paper-swap, .line-fill, .pop-in, .msg-in { animation: none !important; }
+  .ring-pulse, .dot-pulse, .skeleton, .headline-sheen, .typing-dots span, .border-beam::after, .group:hover .icon-bob { animation: none !important; }
+  .btn-shine::after { display: none; }
+}

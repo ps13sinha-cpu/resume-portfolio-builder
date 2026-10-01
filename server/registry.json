@@ -1,0 +1,59 @@
+{
+  "templates": [
+    {
+      "id": "react-showcase-modern",
+      "created_at": "2026-09-29T07:56:25.613Z",
+      "name": "react-showcase-modern",
+      "source_repo_url": null,
+      "source_path": "templates-external/react-showcase-modern",
+      "stack": "react",
+      "source_hash": "8d20a85c504019f3",
+      "source_files": {
+        "package.json": "{\n  \"name\": \"react-showcase-modern\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"description\": \"Phase-1 fixture: JSON-data-driven React portfolio template\",\n  \"dependencies\": {\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\"\n  }\n}\n",
+        "src/data.json": "{\n  \"profile\": {\n    \"fullName\": \"Demo Person\",\n    \"title\": \"Software Developer\",\n    \"email\": \"demo@example.com\",\n    \"location\": \"Berlin, Germany\",\n    \"bio\": \"Demo bio text for the fixture template. Replace me via the adapter.\"\n  },\n  \"skills\": [\"React\", \"Node.js\", \"CSS\"],\n  \"experience\": [\n    {\n      \"company\": \"Demo Corp\",\n      \"role\": \"Developer\",\n      \"period\": \"2020 - Present\",\n      \"summary\": \"Did demo things at demo scale.\"\n    }\n  ],\n  \"projects\": [\n    { \"name\": \"Demo Project One\", \"description\": \"A demo project.\", \"tech\": [\"React\"] },\n    { \"name\": \"Demo Project Two\", \"description\": \"Another demo project.\", \"tech\": [\"Node.js\"] },\n    { \"name\": \"Demo Project Three\", \"description\": \"Yet another demo.\", \"tech\": [\"CSS\"] }\n  ],\n  \"education\": [\n    { \"school\": \"Demo University\", \"degree\": \"B.Sc.\", \"period\": \"2016 - 2020\" }\n  ],\n  \"certifications\": [\n    { \"title\": \"Demo Cert\", \"issuer\": \"Demo Issuer\", \"date\": \"2023\" }\n  ]\n}\n",
+        "src/main.jsx": "import React from 'react';\nimport { createRoot } from 'react-dom/client';\n\n// Fixture template: consumes data.json via the adapter's canonicalToTemplateProps.\n// At preview time the host injects real data through window.__TEMPLATE_DATA__.\nimport demoData from './data.json';\nconst data = (typeof window !== 'undefined' && window.__TEMPLATE_DATA__) || demoData;\n\nconst Profile = ({ p }) => (\n  <header className=\"hero\">\n    <h1>{p.name}</h1>\n    <p className=\"role\">{p.role}</p>\n    <p className=\"bio\">{p.bio}</p>\n    <p className=\"meta\">{p.location} · {p.email}</p>\n  </header>\n);\n\nconst Experience = ({ items }) => (\n  <section className=\"section\">\n    <h2>Experience</h2>\n    <div className=\"grid-2\">\n      {items.map((x, i) => (\n        <article key={i} className=\"card\">\n          <h3>{x.title} <span className=\"muted\">· {x.company}</span></h3>\n          <p className=\"period\">{x.period}</p>\n          <p>{x.summary}</p>\n        </article>\n      ))}\n    </div>\n  </section>\n);\n\nconst Projects = ({ items }) => (\n  <section className=\"section\">\n    <h2>Projects</h2>\n    <div className=\"grid-3\">\n      {items.map((x, i) => (\n        <article key={i} className=\"card\">\n          <h3>{x.name}</h3>\n          <p>{x.description}</p>\n          <p className=\"tags\">{(x.tech || []).join(' · ')}</p>\n        </article>\n      ))}\n    </div>\n  </section>\n);\n\nconst Education = ({ items }) => (\n  <section className=\"section\">\n    <h2>Education</h2>\n    {items.map((x, i) => (\n      <p key={i}><strong>{x.degree}{x.field ? `, ${x.field}` : ''}</strong> — {x.school} <span className=\"muted\">({x.period})</span></p>\n    ))}\n  </section>\n);\n\nconst Certifications = ({ items }) => (\n  <section className=\"section\">\n    <h2>Certifications</h2>\n    {items.map((x, i) => (\n      <p key={i}>{x.title} — {x.issuer} <span className=\"muted\">({x.date})</span></p>\n    ))}\n  </section>\n);\n\nconst Skills = ({ items }) => (\n  <section className=\"section\">\n    <h2>Skills</h2>\n    <p className=\"tags\">{items.map((s) => s.name).join(' · ')}</p>\n  </section>\n);\n\nconst App = ({ data: d }) => (\n  <div className=\"wrap\">\n    <Profile p={d.profile} />\n    <Skills items={d.skills} />\n    <Experience items={d.experience} />\n    <Projects items={d.projects} />\n    <Education items={d.education} />\n    <Certifications items={d.certifications} />\n  </div>\n);\n\ncreateRoot(document.getElementById('root')).render(<App data={data} />);\n",
+        "src/styles.css": ":root { --accent: #6366f1; --bg: #0b0e16; --fg: #e5e7eb; --card: #151a26; }\n* { box-sizing: border-box; margin: 0; }\nbody { background: var(--bg); color: var(--fg); font-family: system-ui, sans-serif; }\n.wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px; }\n.hero h1 { font-size: 2.4rem; letter-spacing: -0.02em; }\n.hero .role { color: var(--accent); font-weight: 600; margin-top: 4px; }\n.hero .bio { margin-top: 12px; opacity: 0.85; line-height: 1.6; }\n.hero .meta { margin-top: 8px; opacity: 0.55; font-size: 0.9rem; }\n.section { margin-top: 40px; }\n.section h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; margin-bottom: 14px; }\n.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }\n.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }\n.card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 16px; }\n.card h3 { font-size: 1rem; }\n.muted { opacity: 0.55; font-weight: 400; }\n.period { opacity: 0.6; font-size: 0.85rem; margin: 4px 0 8px; }\n.tags { color: var(--accent); font-size: 0.85rem; margin-top: 8px; }\n@media (max-width: 640px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }\n"
+      },
+      "preview_image_url": null,
+      "updated_at": "2026-09-29T08:05:43.870Z",
+      "status": "verified",
+      "manifest_json": {
+        "sections": {
+          "profile": {
+            "supported": true,
+            "expectedShape": "inferred from source scan (no AI key configured)"
+          },
+          "education": {
+            "supported": true,
+            "expectedShape": "inferred from source scan (no AI key configured)"
+          },
+          "experience": {
+            "supported": true,
+            "expectedShape": "inferred from source scan (no AI key configured)"
+          },
+          "skills": {
+            "supported": true,
+            "expectedShape": "inferred from source scan (no AI key configured)"
+          },
+          "projects": {
+            "supported": true,
+            "expectedShape": "inferred from source scan (no AI key configured)"
+          },
+          "certifications": {
+            "supported": true,
+            "expectedShape": "inferred from source scan (no AI key configured)"
+          },
+          "contact": {
+            "supported": false,
+            "expectedShape": "not displayed by this template"
+          }
+        },
+        "isDataDriven": true,
+        "notes": "Heuristic manifest (no ANTHROPIC_API_KEY at ingestion time). Regex-inferred support; limits omitted unless explicit in code."
+      },
+      "adapter_code": "function canonicalToTemplateProps(canonicalData) {\n  const d = canonicalData || {};\n  const p = d.profile || {};\n  const fmt = function (start, end, current) {\n    var s = start || ''; var e = current ? 'Present' : (end || '');\n    return [s, e].filter(Boolean).join(' - ');\n  };\n  return {\n    profile: {\n      name: p.fullName || '', role: p.title || '', email: p.email || '',\n      location: p.location || '', bio: p.bio || '', avatarUrl: p.avatarUrl || ''\n    },\n    about: { heading: 'About', body: p.bio || '' },\n    education: (d.education || []).map(function (x) {\n      return { school: x.institution, degree: x.degree, field: x.field, period: fmt(x.startDate, x.endDate, false), grade: x.grade };\n    }),\n    experience: (d.experience || []).map(function (x) {\n      return { company: x.company, title: x.role, period: fmt(x.startDate, x.endDate, x.isCurrent), summary: (x.bullets || []).join(' '), bullets: x.bullets || [] };\n    }),\n    skills: (d.skills || []).map(function (s) { return { name: s.name, category: s.category }; }),\n    projects: (d.projects || []).map(function (x) {\n      return { name: x.title, description: x.description, tech: x.techStack || [], links: x.links || {} };\n    }),\n    certifications: (d.certifications || []).map(function (c) {\n      return { title: c.name, issuer: c.issuer, date: c.date, url: c.credentialUrl };\n    })\n  };\n}",
+      "bundle_path": "server/bundles/react-showcase-modern.html",
+      "reviewed_at": "2026-09-29T08:05:43.867Z"
+    }
+  ]
+}

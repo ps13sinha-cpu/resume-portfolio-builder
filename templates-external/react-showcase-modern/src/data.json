@@ -1,0 +1,29 @@
+{
+  "profile": {
+    "fullName": "Demo Person",
+    "title": "Software Developer",
+    "email": "demo@example.com",
+    "location": "Berlin, Germany",
+    "bio": "Demo bio text for the fixture template. Replace me via the adapter."
+  },
+  "skills": ["React", "Node.js", "CSS"],
+  "experience": [
+    {
+      "company": "Demo Corp",
+      "role": "Developer",
+      "period": "2020 - Present",
+      "summary": "Did demo things at demo scale."
+    }
+  ],
+  "projects": [
+    { "name": "Demo Project One", "description": "A demo project.", "tech": ["React"] },
+    { "name": "Demo Project Two", "description": "Another demo project.", "tech": ["Node.js"] },
+    { "name": "Demo Project Three", "description": "Yet another demo.", "tech": ["CSS"] }
+  ],
+  "education": [
+    { "school": "Demo University", "degree": "B.Sc.", "period": "2016 - 2020" }
+  ],
+  "certifications": [
+    { "title": "Demo Cert", "issuer": "Demo Issuer", "date": "2023" }
+  ]
+}
